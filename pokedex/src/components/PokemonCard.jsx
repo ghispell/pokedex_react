@@ -1,4 +1,3 @@
-
 function PokemonCard(props) {
     console.log(props);
 
