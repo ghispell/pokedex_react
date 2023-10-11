@@ -8,7 +8,7 @@ function PokemonCard(props) {
     const { pokemon } = props;
     return (
         <figure>
-            <p>{pokemon.imgSrc === undefined ?"???" : <img src={pokemon.imgSrc} alt={pokemon.name}/>}</p>
+            {pokemon.imgSrc === undefined ?"???" : <img src={pokemon.imgSrc} alt={pokemon.name}/>}
         <figcaption>{pokemon.name}</figcaption></figure>
         )
     }
