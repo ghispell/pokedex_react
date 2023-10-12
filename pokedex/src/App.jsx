@@ -32,23 +32,18 @@ const pokemonList = [
 
 
 function App() {
-
-const [pokemonIndex, setPokemonIndex] = useState(0);
-
-const handleClickPrevious = () => {
-  setPokemonIndex(pokemonIndex - 1)
-}
-
-const handleClickFollowing = () => {
-  setPokemonIndex(pokemonIndex + 1)
-}
+  const [pokemon, setPokemon] = useState(0);
+  function newIndex(index){
+    setPokemon(index);
+  }
 
   return (
    <>
 
     <div>
-      <Button previous ={handleClickPrevious} next={handleClickFollowing} pokemonIndex={pokemonIndex} pokemonList={pokemonList}/>
-      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+
+      <Button pokemonList={pokemonList} setPokemon={newIndex}/>
+      <PokemonCard pokemon={pokemonList[pokemon]} />
     </div>
    
   </> 
